@@ -66,4 +66,4 @@ To run this project locally, follow these steps:
 ## 🌐 Live Demo
 
 Experience the game live on Vercel:
-👉 <https://https://wall-hanan.vercel.app//>
+👉 https://wall-hanan.vercel.app/
