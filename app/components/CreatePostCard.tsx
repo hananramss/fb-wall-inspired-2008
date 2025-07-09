@@ -5,7 +5,6 @@ import { Paperclip } from "lucide-react";
 import { supabase } from "../lib/supabaseClient";
 
 const MAX_CHARS = 280;
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
 interface Post {
   id: string;
@@ -119,10 +118,6 @@ const CreatePostCard = () => {
                     onChange={(e) => {
                         const file = e.target.files?.[0];
                         if (file) {
-                        if (file.size > MAX_FILE_SIZE) {
-                            alert("Image too large! Max allowed is 5MB.");
-                            return;
-                        }
                         setImage(file);
                         }
                     }}
@@ -145,7 +140,7 @@ const CreatePostCard = () => {
             <img
               src={URL.createObjectURL(image)}
               alt="Preview"
-              className="max-h-60 w-auto max-w-xs mt-2 rounded-md"
+              className="w-full max-w-md max-h-[400px] object-contain mt-2 rounded-md"
             />
           )}
         </div>
@@ -153,7 +148,12 @@ const CreatePostCard = () => {
         <div className="flex justify-end mt-3">
           <button
             onClick={handleShare}
-            className="bg-blue-500 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-600 transition"
+            disabled={!text.trim() && !image}
+            className={`text-white text-sm px-4 py-2 rounded-md transition ${
+              !text.trim() && !image
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-blue-500 hover:bg-blue-600"
+            }`}
           >
             Share
           </button>
