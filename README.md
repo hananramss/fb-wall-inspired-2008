@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧱 Wall App: A Throwback to the Classic Facebook Wall 📬
 
-## Getting Started
+A simple, real-time wall where users can post messages and attach images — no login required. Inspired by the old-school Facebook Wall from 2008, this app brings back the nostalgic feel of basic social sharing with modern tech.
 
-First, run the development server:
+> ⚠️ **Note:** This project is built for **practice purposes** and as part of a **hiring test**. It is not intended for production use.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Real-Time Posting**: New posts appear instantly without page refresh.
+- **Text + Image Uploads**: Share up to 280 characters and attach any image type.
+- **Live Image Preview**: See the image before you post.
+- **Disabled Share Button**: Prevents posting until content is entered.
+- **Responsive UI**: Mobile, tablet, and desktop ready.
+- **Timestamps**: Posts are time-stamped for clarity.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🕹️ How to Use
 
-To learn more about Next.js, take a look at the following resources:
+1. Type your message (up to 280 characters).
+2. Optionally, attach an image.
+3. Click the **Share** button.
+4. Your post appears instantly in the wall feed.
+5. Scroll to view posts from newest to oldest.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Technologies Used
 
-## Deploy on Vercel
+- **React.js** – Frontend framework.
+- **Supabase** – Backend for:
+  - Realtime database
+  - Storage for images
+- **Tailwind CSS** – For responsive and clean UI design.
+- **Lucide Icons** – Lightweight icon set.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Getting Started
+
+To run this project locally, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/hananramss/fb-wall-inspired-2008.git
+    cd wall-app
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or yarn install
+    # or pnpm install
+    # or bun install
+    ```
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    # or yarn dev
+    # or pnpm dev
+    # or bun dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🌐 Live Demo
+
+Experience the game live on Vercel:
+👉 <https://https://wall-hanan.vercel.app//>
